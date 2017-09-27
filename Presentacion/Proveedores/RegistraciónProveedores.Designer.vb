@@ -22,17 +22,147 @@ Partial Class RegistraciónProveedores
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtTelefono = New System.Windows.Forms.TextBox()
+        Me.txtDomicilio = New System.Windows.Forms.TextBox()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.btnSsalir = New System.Windows.Forms.Button()
+        Me.btnRegistrar = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Form2
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Gill Sans MT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(126, 65)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(104, 34)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Máquinas"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Gill Sans MT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(49, 31)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(268, 34)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Registración Proveedores"
+        '
+        'txtTelefono
+        '
+        Me.txtTelefono.Location = New System.Drawing.Point(94, 202)
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(153, 20)
+        Me.txtTelefono.TabIndex = 7
+        '
+        'txtDomicilio
+        '
+        Me.txtDomicilio.Location = New System.Drawing.Point(94, 163)
+        Me.txtDomicilio.Name = "txtDomicilio"
+        Me.txtDomicilio.Size = New System.Drawing.Size(153, 20)
+        Me.txtDomicilio.TabIndex = 6
+        '
+        'txtDescripcion
+        '
+        Me.txtDescripcion.Location = New System.Drawing.Point(94, 130)
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(153, 20)
+        Me.txtDescripcion.TabIndex = 5
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(11, 261)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(121, 23)
+        Me.btnLimpiar.TabIndex = 10
+        Me.btnLimpiar.Text = "Limpiar campos"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
+        'btnSsalir
+        '
+        Me.btnSsalir.Location = New System.Drawing.Point(279, 240)
+        Me.btnSsalir.Name = "btnSsalir"
+        Me.btnSsalir.Size = New System.Drawing.Size(59, 44)
+        Me.btnSsalir.TabIndex = 9
+        Me.btnSsalir.Text = "Salir"
+        Me.btnSsalir.UseVisualStyleBackColor = True
+        '
+        'btnRegistrar
+        '
+        Me.btnRegistrar.Location = New System.Drawing.Point(142, 261)
+        Me.btnRegistrar.Name = "btnRegistrar"
+        Me.btnRegistrar.Size = New System.Drawing.Size(121, 23)
+        Me.btnRegistrar.TabIndex = 8
+        Me.btnRegistrar.Text = "Registrar proveedor"
+        Me.btnRegistrar.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(39, 166)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(49, 13)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Domicilio"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(19, 205)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(69, 13)
+        Me.Label4.TabIndex = 12
+        Me.Label4.Text = "Nro Teléfono"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(25, 133)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(63, 13)
+        Me.Label3.TabIndex = 11
+        Me.Label3.Text = "Descripción"
+        '
+        'RegistraciónProveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Name = "Form2"
+        Me.ClientSize = New System.Drawing.Size(350, 296)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.btnLimpiar)
+        Me.Controls.Add(Me.btnSsalir)
+        Me.Controls.Add(Me.btnRegistrar)
+        Me.Controls.Add(Me.txtTelefono)
+        Me.Controls.Add(Me.txtDomicilio)
+        Me.Controls.Add(Me.txtDescripcion)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Name = "RegistraciónProveedores"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form2"
+        Me.Text = "Registro de proveedores"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
+
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txtTelefono As System.Windows.Forms.TextBox
+    Friend WithEvents txtDomicilio As System.Windows.Forms.TextBox
+    Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
+    Friend WithEvents btnLimpiar As System.Windows.Forms.Button
+    Friend WithEvents btnSsalir As System.Windows.Forms.Button
+    Friend WithEvents btnRegistrar As System.Windows.Forms.Button
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class
