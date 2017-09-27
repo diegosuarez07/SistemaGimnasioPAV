@@ -9,12 +9,17 @@
     End Sub
 
     Private Sub RegistraciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistraciónToolStripMenuItem.Click
-        Dim form1 As New Form1
-        form1.ShowDialog()
+        Dim regClientes As New RegistraciónClientes
+        regClientes.ShowDialog()
     End Sub
 
     Private Sub RegistraciónToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RegistraciónToolStripMenuItem1.Click
-        Dim form2 As New Form2
-        form2.ShowDialog()
+        Dim regMaquinas As New RegistracionMaquinas
+        regMaquinas.ShowDialog()
+    End Sub
+
+    Private Sub RegistraciónToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles RegistraciónToolStripMenuItem2.Click
+        Dim regProveedores As New RegistraciónProveedores
+        regProveedores.ShowDialog()
     End Sub
 End Class

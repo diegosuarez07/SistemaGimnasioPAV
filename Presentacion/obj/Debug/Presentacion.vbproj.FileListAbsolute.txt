@@ -10,18 +10,17 @@ C:\Users\Usuario\Desktop\Sistema Gimnasio\SistemaGimnasio\Presentacion\obj\Debug
 C:\Users\Usuario\Desktop\Sistema Gimnasio\SistemaGimnasio\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\Usuario\Desktop\Sistema Gimnasio\SistemaGimnasio\Presentacion\obj\Debug\Presentacion.xml
 C:\Users\Usuario\Desktop\Sistema Gimnasio\SistemaGimnasio\Presentacion\obj\Debug\Presentacion.pdb
-C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.exe
-C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.xml
-C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.pdb
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\bin\Debug\Presentacion.exe
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\bin\Debug\Presentacion.pdb
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\bin\Debug\Presentacion.xml
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\bin\Debug\Negocio.dll
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\bin\Debug\Negocio.pdb
-C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\bin\Debug\Negocio.xml
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.vbprojResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.RegistraciónClientes.resources
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.RegistraciónProveedores.resources
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.Menu.resources
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.Resources.resources
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.vbproj.GenerateResource.Cache
-C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.Menu.resources
-C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.Form1.resources
-C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.Form2.resources
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.xml
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.pdb
