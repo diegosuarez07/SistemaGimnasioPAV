@@ -1,4 +1,5 @@
-﻿Public Class RegistraciónClientes
+﻿Imports System.Data.SqlClient
+Public Class RegistraciónClientes
     Public nombre, apellido, domicilio, nroTelefono, dni As String
     Public fechaNacimiento As DateTime
     Public cuota, planEntren As Integer
@@ -42,7 +43,7 @@
         activo = True
 
 
-        Dim cadenaConexion As String = "Data Source=localhost;Initial Catalog=SistemaGimnasio;Integrated Security=True"
+        Dim cadenaConexion As String = "Provider=.NET Framework Data Provider for SQL Server;Data Source=localhost;Initial Catalog=SistemaGimnasio;Integrated Security=True"
         Dim conexion As New Data.OleDb.OleDbConnection
         conexion.ConnectionString = cadenaConexion
 
@@ -57,8 +58,8 @@
         consulta &= ", '" & Me.nroTelefono & "'"
         consulta &= ", " & Me.fechaNacimiento & ""
         consulta &= ", '" & Me.domicilio & "'"
-        consulta &= ", " & Me.planEntren & ""
-        consulta &= ", " & Me.cuota & ""
+        consulta &= ", " & 1 & ""
+        consulta &= ", " & 1 & ""
         consulta &= ", " & Me.activo & ""
 
 
