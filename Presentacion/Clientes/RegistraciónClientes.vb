@@ -32,42 +32,47 @@ Public Class RegistraciónClientes
         Me.Close()
     End Sub
     Private Sub RegistrarCliente()
-        nombre = txtNombre.Text
-        apellido = txtApellido.Text
-        dni = txtDni.Text
-        domicilio = txtDomicilio.Text
-        nroTelefono = txtTelefono.Text
-        cuota = cmbCuota.SelectedValue
-        fechaNacimiento = dtpFechaNacimiento.Value
-        planEntren = cmbPlanEntrenamiento.SelectedValue
-        activo = True
+        Try
+            nombre = txtNombre.Text
+            apellido = txtApellido.Text
+            dni = txtDni.Text
+            domicilio = txtDomicilio.Text
+            nroTelefono = txtTelefono.Text
+            cuota = cmbCuota.SelectedValue
+            fechaNacimiento = dtpFechaNacimiento.Value
+            planEntren = cmbPlanEntrenamiento.SelectedValue
+            activo = True
 
 
-        Dim cadenaConexion As String = "Provider=.NET Framework Data Provider for SQL Server;Data Source=localhost;Initial Catalog=SistemaGimnasio;Integrated Security=True"
-        Dim conexion As New Data.OleDb.OleDbConnection
-        conexion.ConnectionString = cadenaConexion
+            Dim cadenaConexion As String = "Data Source=DESKTOP-PP344HH;Integrated Security=SSPI;Initial Catalog=SistemaGimnasio"
+            Dim conexion As New Data.SqlClient.SqlConnection
+            conexion.ConnectionString = cadenaConexion
 
-        Dim cmd As New Data.OleDb.OleDbCommand
-        conexion.Open()
-        Dim consulta As String = ""
+            Dim cmd As New Data.SqlClient.SqlCommand
+            conexion.Open()
+            Dim consulta As String = ""
 
-        consulta = "insert into Cliente (cliApellido, cliNombre, cliDni, cliTelefono, cliFechaNacimiento, cliDomicilio, planId, cuoId, cliActivo) "
-        consulta &= "values ('" & Me.apellido & "'"
-        consulta &= ", '" & Me.nombre & "'"
-        consulta &= ", '" & Me.dni & "'"
-        consulta &= ", '" & Me.nroTelefono & "'"
-        consulta &= ", " & Me.fechaNacimiento & ""
-        consulta &= ", '" & Me.domicilio & "'"
-        consulta &= ", " & 1 & ""
-        consulta &= ", " & 1 & ""
-        consulta &= ", " & Me.activo & ""
+            consulta = "insert into Cliente (cliApellido, cliNombre, cliDni, cliTelefono, cliFechaNacimiento, cliDomicilio, planId, cuoId, cliActivo) "
+            consulta &= "values ('" & Me.apellido & "'"
+            consulta &= ", '" & Me.nombre & "'"
+            consulta &= ", '" & Me.dni & "'"
+            consulta &= ", '" & Me.nroTelefono & "'"
+            consulta &= ", " & Me.fechaNacimiento & ""
+            consulta &= ", '" & Me.domicilio & "'"
+            consulta &= ", " & 1 & ""
+            consulta &= ", " & 1 & ""
+            consulta &= ", " & Me.activo & ""
 
 
-        cmd.CommandType = CommandType.Text
-        cmd.CommandText = consulta
-        cmd.Connection = conexion
-        cmd.ExecuteNonQuery()
-        conexion.Close()
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = consulta
+            cmd.Connection = conexion
+
+            conexion.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
     End Sub
 
