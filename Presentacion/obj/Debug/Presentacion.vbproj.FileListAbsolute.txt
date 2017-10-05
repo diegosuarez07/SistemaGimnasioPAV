@@ -23,3 +23,10 @@ C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.xml
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.pdb
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV-master\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV-master\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV-master\Presentacion\obj\Debug\Presentacion.xml
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV-master\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.RegistracionMaquinas.resources
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.RegistracionEmpleados.resources
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.RegistracionSuplemento.resources

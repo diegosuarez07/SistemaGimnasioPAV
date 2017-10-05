@@ -76,10 +76,11 @@
     <Compile Include="Clientes\RegistraciónClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DataSet1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <Compile Include="Suplemento\RegistracionSuplemento.Designer.vb">
+      <DependentUpon>RegistracionSuplemento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Suplemento\RegistracionSuplemento.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Maquinas\RegistracionMaquinas.Designer.vb">
       <DependentUpon>RegistracionMaquinas.vb</DependentUpon>
@@ -114,10 +115,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Empleados\RegistracionEmpleados.Designer.vb">
+      <DependentUpon>RegistracionEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados\RegistracionEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Clientes\RegistraciónClientes.resx">
       <DependentUpon>RegistraciónClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maquinas\RegistracionMaquinas.resx">
+      <DependentUpon>RegistracionMaquinas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedores\RegistraciónProveedores.resx">
       <DependentUpon>RegistraciónProveedores.vb</DependentUpon>
@@ -131,20 +141,15 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Empleados\RegistracionEmpleados.resx">
+      <DependentUpon>RegistracionEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suplemento\RegistracionSuplemento.resx">
+      <DependentUpon>RegistracionSuplemento.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
