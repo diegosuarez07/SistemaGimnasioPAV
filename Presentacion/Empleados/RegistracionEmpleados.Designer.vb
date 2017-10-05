@@ -205,6 +205,7 @@ Partial Class RegistracionEmpleados
         Me.Controls.Add(Me.lbl_nombre)
         Me.Controls.Add(Me.lbl_apellido)
         Me.Name = "RegistracionEmpleados"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RegistracionEmpleados"
         CType(Me.txt_documento, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

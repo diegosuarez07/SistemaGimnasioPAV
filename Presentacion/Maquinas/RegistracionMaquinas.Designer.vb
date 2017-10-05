@@ -173,6 +173,7 @@ Partial Class RegistracionMaquinas
         Me.Controls.Add(Me.lbl_descripcion)
         Me.Controls.Add(Me.lbl_nombre)
         Me.Name = "RegistracionMaquinas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RegistracionMaquinas"
         Me.ResumeLayout(False)
         Me.PerformLayout()

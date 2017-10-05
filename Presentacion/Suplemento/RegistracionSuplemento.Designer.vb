@@ -188,6 +188,7 @@ Partial Class RegistracionSuplemento
         Me.Controls.Add(Me.btn_guardar)
         Me.Controls.Add(Me.btn_nuevo)
         Me.Name = "RegistracionSuplemento"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RegistracionSuplemento"
         CType(Me.txt_precioventa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txt_preciocompra, System.ComponentModel.ISupportInitialize).EndInit()
