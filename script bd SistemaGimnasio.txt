@@ -1,0 +1,375 @@
+USE [master]
+GO
+/****** Object:  Database [SistemaGimnasio]    Script Date: 14/9/2017 22:34:37 ******/
+CREATE DATABASE [SistemaGimnasio]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'SistemaGimnasio', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\SistemaGimnasio.mdf' , SIZE = 5120KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+ LOG ON 
+( NAME = N'SistemaGimnasio_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\SistemaGimnasio_log.ldf' , SIZE = 2048KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+GO
+ALTER DATABASE [SistemaGimnasio] SET COMPATIBILITY_LEVEL = 120
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [SistemaGimnasio].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [SistemaGimnasio] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [SistemaGimnasio] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [SistemaGimnasio] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET  DISABLE_BROKER 
+GO
+ALTER DATABASE [SistemaGimnasio] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [SistemaGimnasio] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [SistemaGimnasio] SET  MULTI_USER 
+GO
+ALTER DATABASE [SistemaGimnasio] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [SistemaGimnasio] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [SistemaGimnasio] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [SistemaGimnasio] SET TARGET_RECOVERY_TIME = 0 SECONDS 
+GO
+ALTER DATABASE [SistemaGimnasio] SET DELAYED_DURABILITY = DISABLED 
+GO
+USE [SistemaGimnasio]
+GO
+/****** Object:  Table [dbo].[AreaEntrenamiento]    Script Date: 14/9/2017 22:34:37 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[AreaEntrenamiento](
+	[areaEntrenId] [int] IDENTITY(1,1) NOT NULL,
+	[areaEntrenDescripcion] [varchar](150) NULL,
+	[empId] [int] NULL,
+	[areaEntrenActivo] [tinyint] NULL,
+ CONSTRAINT [PK_AreaEntrenamiento] PRIMARY KEY CLUSTERED 
+(
+	[areaEntrenId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Cliente]    Script Date: 14/9/2017 22:34:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Cliente](
+	[cliId] [int] IDENTITY(1,1) NOT NULL,
+	[cliApellido] [varchar](50) NULL,
+	[cliNombre] [varchar](50) NULL,
+	[cliDni] [varchar](50) NULL,
+	[cliTelefono] [varchar](50) NULL,
+	[cliFechaNacimiento] [datetime] NULL,
+	[cliDomicilio] [varchar](150) NULL,
+	[planId] [int] NULL,
+	[cuoId] [int] NULL,
+	[cliActivo] [tinyint] NULL,
+ CONSTRAINT [PK_Cliente] PRIMARY KEY CLUSTERED 
+(
+	[cliId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Cuota]    Script Date: 14/9/2017 22:34:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Cuota](
+	[cuoId] [int] IDENTITY(1,1) NOT NULL,
+	[cuoNombre] [varchar](50) NULL,
+	[cuoPrecioCuota] [int] NULL,
+	[cuoFechaPagoCuota] [datetime] NULL,
+ CONSTRAINT [PK_Cuota] PRIMARY KEY CLUSTERED 
+(
+	[cuoId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[DetalleFacturaCompra]    Script Date: 14/9/2017 22:34:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[DetalleFacturaCompra](
+	[dfaId] [int] IDENTITY(1,1) NOT NULL,
+	[supId] [int] NULL,
+	[dfaCantidadSuplemento] [int] NULL,
+	[dfaPresupuesto] [int] NULL,
+ CONSTRAINT [PK_DetalleFacturaCompra] PRIMARY KEY CLUSTERED 
+(
+	[dfaId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Empleado]    Script Date: 14/9/2017 22:34:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Empleado](
+	[empId] [int] IDENTITY(1,1) NOT NULL,
+	[empApellido] [varchar](50) NULL,
+	[empNombre] [varchar](50) NULL,
+	[empDni] [varchar](50) NULL,
+	[empFuncionId] [int] NULL,
+	[empDomicilio] [varchar](50) NULL,
+	[empHorId] [int] NULL,
+	[empActivo] [tinyint] NULL,
+ CONSTRAINT [PK_Empleado] PRIMARY KEY CLUSTERED 
+(
+	[empId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[EmpleadoFuncion]    Script Date: 14/9/2017 22:34:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[EmpleadoFuncion](
+	[empFuncionId] [int] IDENTITY(1,1) NOT NULL,
+	[empFuncionDescripcion] [varchar](50) NULL,
+	[empFuncionActivo] [tinyint] NULL,
+ CONSTRAINT [PK_EmpleadoFuncion] PRIMARY KEY CLUSTERED 
+(
+	[empFuncionId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[EmpleadoHorario]    Script Date: 14/9/2017 22:34:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[EmpleadoHorario](
+	[empHorId] [int] IDENTITY(1,1) NOT NULL,
+	[empDiaSemana] [varchar](50) NULL,
+	[empHorInicio] [datetime] NULL,
+	[empHoraFin] [datetime] NULL,
+ CONSTRAINT [PK_EmpleadoHorario] PRIMARY KEY CLUSTERED 
+(
+	[empHorId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[FacturaCompra]    Script Date: 14/9/2017 22:34:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[FacturaCompra](
+	[fcoId] [int] IDENTITY(1,1) NOT NULL,
+	[dfaId] [int] NULL,
+	[cliId] [int] NULL,
+	[fcoFechaCompra] [datetime] NULL,
+ CONSTRAINT [PK_FacturaCompra] PRIMARY KEY CLUSTERED 
+(
+	[fcoId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Maquina]    Script Date: 14/9/2017 22:34:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Maquina](
+	[maqId] [int] IDENTITY(1,1) NOT NULL,
+	[maqNombre] [varchar](150) NULL,
+	[maqDescripcion] [varchar](150) NULL,
+	[provMaquinId] [int] NULL,
+	[maqFechaCompra] [datetime] NULL,
+	[areaEntrenId] [int] NULL,
+	[maqActivo] [tinyint] NULL,
+ CONSTRAINT [PK_Maquina] PRIMARY KEY CLUSTERED 
+(
+	[maqId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[PlanEntrenamiento]    Script Date: 14/9/2017 22:34:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[PlanEntrenamiento](
+	[planId] [int] IDENTITY(1,1) NOT NULL,
+	[planNombre] [varchar](50) NULL,
+	[planDescripcion] [varchar](150) NULL,
+	[planPrecio] [int] NULL,
+	[areaEntrenId] [int] NULL,
+	[planActivo] [tinyint] NULL,
+ CONSTRAINT [PK_PlanEntrenamiento] PRIMARY KEY CLUSTERED 
+(
+	[planId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[ProveedorMaquina]    Script Date: 14/9/2017 22:34:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ProveedorMaquina](
+	[provMaquinId] [int] IDENTITY(1,1) NOT NULL,
+	[provMaquinDescripcion] [varchar](150) NULL,
+	[provMaquinDomicilio] [varchar](150) NULL,
+	[provMaquinTelefono] [varchar](50) NULL,
+	[provMaquinActivo] [tinyint] NULL,
+ CONSTRAINT [PK_ProveedorMaquina] PRIMARY KEY CLUSTERED 
+(
+	[provMaquinId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[ProveedorSuplemento]    Script Date: 14/9/2017 22:34:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ProveedorSuplemento](
+	[provSuplemId] [int] IDENTITY(1,1) NOT NULL,
+	[provSuplemNombre] [varchar](150) NULL,
+	[provSuplemDescripcion] [varchar](150) NULL,
+	[provSuplemDomicilio] [varchar](150) NULL,
+	[provSuplemTelefono] [varchar](50) NULL,
+	[provSuplemActivo] [tinyint] NULL,
+ CONSTRAINT [PK_ProveedorSuplemento] PRIMARY KEY CLUSTERED 
+(
+	[provSuplemId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[Suplemento]    Script Date: 14/9/2017 22:34:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Suplemento](
+	[supId] [int] IDENTITY(1,1) NOT NULL,
+	[supNombre] [varchar](150) NULL,
+	[supPrecioCompra] [int] NULL,
+	[supPrecioVenta] [int] NULL,
+	[provId] [int] NULL,
+	[supActivo] [tinyint] NULL,
+ CONSTRAINT [PK_Suplemento] PRIMARY KEY CLUSTERED 
+(
+	[supId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+ALTER TABLE [dbo].[Empleado]  WITH CHECK ADD  CONSTRAINT [FK_Empleado_EmpleadoFuncion] FOREIGN KEY([empFuncionId])
+REFERENCES [dbo].[EmpleadoFuncion] ([empFuncionId])
+GO
+ALTER TABLE [dbo].[Empleado] CHECK CONSTRAINT [FK_Empleado_EmpleadoFuncion]
+GO
+ALTER TABLE [dbo].[Empleado]  WITH CHECK ADD  CONSTRAINT [FK_Empleado_EmpleadoHorario] FOREIGN KEY([empHorId])
+REFERENCES [dbo].[EmpleadoHorario] ([empHorId])
+GO
+ALTER TABLE [dbo].[Empleado] CHECK CONSTRAINT [FK_Empleado_EmpleadoHorario]
+GO
+USE [master]
+GO
+ALTER DATABASE [SistemaGimnasio] SET  READ_WRITE 
+GO
