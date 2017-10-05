@@ -42,6 +42,11 @@ Public Class RegistracionMaquinas
     End Sub
     Private Sub cmd_nuevo_Click(sender As Object, e As EventArgs) Handles cmd_nuevo.Click
 
+        LimpiarCampos()
+
+    End Sub
+    Private Sub LimpiarCampos()
+
         txt_nombre.Enabled = True
 
         cmb_area.Enabled = True
@@ -49,7 +54,6 @@ Public Class RegistracionMaquinas
         cmb_prov.Enabled = True
 
         cmd_save.Enabled = True
-
     End Sub
 
     Private Sub cmd_exit_Click(sender As Object, e As EventArgs) Handles cmd_exit.Click
@@ -60,5 +64,9 @@ Public Class RegistracionMaquinas
         If MessageBox.Show("¿Estas seguro que desea salir?", "ABM", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.No Then
             e.Cancel = True
         End If
+    End Sub
+
+    Private Sub RegistracionMaquinas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

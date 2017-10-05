@@ -46,9 +46,9 @@ Public Class RegistracionEmpleados
             txt_direccion.Text = tablaA.Rows(0).Item(5).ToString()
             cmb_horario.SelectedValue = tablaA.Rows(0).Item(6).ToString()
             If tablaA.Rows(0).Item(7).ToString() = 1 Then
-                CheckBox1.Checked = True
+                checkActivo.Checked = True
             Else
-                CheckBox1.Checked = False
+                checkActivo.Checked = False
 
             End If
         End If
@@ -75,4 +75,23 @@ Public Class RegistracionEmpleados
     Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
         Me.Close()
     End Sub
+
+    Private Sub btn_nuevo_Click(sender As Object, e As EventArgs) Handles btn_nuevo.Click
+        LimpiarCampos()
+    End Sub
+
+
+    Private Sub LimpiarCampos()
+
+        txt_apellido.Text = ""
+        txt_nombre.Text = ""
+        txt_direccion.Text = ""
+        cmb_funcion.SelectedValue = 0
+        cmb_horario.SelectedValue = 0
+        checkActivo.Checked = False
+
+
+
+    End Sub
+
 End Class
