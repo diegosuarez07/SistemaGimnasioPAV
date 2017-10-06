@@ -37,11 +37,11 @@
         nroTelProveedor = txtTelefono.Text
         activoProveedor = True
 
-        Dim conexion As New Data.OleDb.OleDbConnection
-        Dim cadenaConexion As String = "Data Source=localhost;Initial Catalog=SistemaGimnasio;Integrated Security=True"
+        Dim conexion As New Data.SqlClient.SqlConnection
+        Dim cadenaConexion As String = "Data Source=DESKTOP-PP344HH;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
         conexion.ConnectionString = cadenaConexion
 
-        Dim cmd As New Data.OleDb.OleDbCommand
+        Dim cmd As New Data.SqlClient.SqlCommand
 
 
         conexion.Open()

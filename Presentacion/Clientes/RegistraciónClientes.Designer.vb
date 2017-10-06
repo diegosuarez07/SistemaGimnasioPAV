@@ -79,6 +79,7 @@ Partial Class RegistraciónClientes
         '
         'dtpFechaNacimiento
         '
+        Me.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFechaNacimiento.Location = New System.Drawing.Point(125, 233)
         Me.dtpFechaNacimiento.Name = "dtpFechaNacimiento"
         Me.dtpFechaNacimiento.Size = New System.Drawing.Size(200, 20)

@@ -39,6 +39,7 @@ Partial Class RegistracionEmpleados
         Me.lbl_apellido = New System.Windows.Forms.Label()
         Me.btn_guardar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btn_buscar = New System.Windows.Forms.Button()
         CType(Me.txt_documento, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -113,7 +114,6 @@ Partial Class RegistracionEmpleados
         '
         'txt_direccion
         '
-        Me.txt_direccion.Enabled = False
         Me.txt_direccion.Location = New System.Drawing.Point(134, 189)
         Me.txt_direccion.MaxLength = 50
         Me.txt_direccion.Name = "txt_direccion"
@@ -122,7 +122,6 @@ Partial Class RegistracionEmpleados
         '
         'txt_nombre
         '
-        Me.txt_nombre.Enabled = False
         Me.txt_nombre.Location = New System.Drawing.Point(134, 106)
         Me.txt_nombre.MaxLength = 50
         Me.txt_nombre.Name = "txt_nombre"
@@ -131,7 +130,6 @@ Partial Class RegistracionEmpleados
         '
         'txt_apellido
         '
-        Me.txt_apellido.Enabled = False
         Me.txt_apellido.Location = New System.Drawing.Point(134, 65)
         Me.txt_apellido.MaxLength = 50
         Me.txt_apellido.Name = "txt_apellido"
@@ -176,7 +174,6 @@ Partial Class RegistracionEmpleados
         '
         'btn_guardar
         '
-        Me.btn_guardar.Enabled = False
         Me.btn_guardar.Location = New System.Drawing.Point(93, 344)
         Me.btn_guardar.Name = "btn_guardar"
         Me.btn_guardar.Size = New System.Drawing.Size(57, 50)
@@ -194,11 +191,21 @@ Partial Class RegistracionEmpleados
         Me.Label3.TabIndex = 60
         Me.Label3.Text = "Registración de empleados"
         '
+        'btn_buscar
+        '
+        Me.btn_buscar.Location = New System.Drawing.Point(377, 61)
+        Me.btn_buscar.Name = "btn_buscar"
+        Me.btn_buscar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_buscar.TabIndex = 61
+        Me.btn_buscar.Text = "Buscar"
+        Me.btn_buscar.UseVisualStyleBackColor = True
+        '
         'RegistracionEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(493, 406)
+        Me.Controls.Add(Me.btn_buscar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.cmb_horario)
         Me.Controls.Add(Me.cmb_funcion)
@@ -242,4 +249,5 @@ Partial Class RegistracionEmpleados
     Friend WithEvents lbl_apellido As Windows.Forms.Label
     Friend WithEvents btn_guardar As Windows.Forms.Button
     Friend WithEvents Label3 As Windows.Forms.Label
+    Friend WithEvents btn_buscar As Windows.Forms.Button
 End Class

@@ -1,19 +1,19 @@
 ﻿Public Class RegistracionSuplemento
     Private Sub ABM_sumplementos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Dim conexion As New Data.SqlClient.SqlConnection
-        'Dim cmd As New Data.SqlClient.SqlCommand
-        'Dim tablaA As New Data.DataTable
-        'conexion.ConnectionString = "Data Source=GASTON-5132\SQLEXPRESS;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
-        'conexion.Open()
-        'cmd.Connection = conexion
-        'cmd.CommandType = CommandType.Text
-        'cmd.CommandText = "Select * from ProveedorSuplemento where provSuplemActivo = 1"
-        'tablaA.Load(cmd.ExecuteReader())
-        'cmb_proveedor.DataSource = tablaA
-        'cmb_proveedor.DisplayMember = "provSuplemNombre"
-        'cmb_proveedor.ValueMember = "provSuplemId"
-        'conexion.Close()
-        'cmb_proveedor.SelectedIndex = -1
+        Dim conexion As New Data.SqlClient.SqlConnection
+        Dim cmd As New Data.SqlClient.SqlCommand
+        Dim tablaA As New Data.DataTable
+        conexion.ConnectionString = "Data Source=GASTON-5132\SQLEXPRESS;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+        conexion.Open()
+        cmd.Connection = conexion
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "Select * from ProveedorSuplemento where provSuplemActivo = 1"
+        tablaA.Load(cmd.ExecuteReader())
+        cmb_proveedor.DataSource = tablaA
+        cmb_proveedor.DisplayMember = "provSuplemNombre"
+        cmb_proveedor.ValueMember = "provSuplemId"
+        conexion.Close()
+        cmb_proveedor.SelectedIndex = -1
 
     End Sub
 

@@ -37,6 +37,7 @@ Partial Class RegistracionSuplemento
         Me.btn_guardar = New System.Windows.Forms.Button()
         Me.btn_nuevo = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.txt_precioventa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txt_preciocompra, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txt_codigo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -179,11 +180,22 @@ Partial Class RegistracionSuplemento
         Me.Label6.TabIndex = 50
         Me.Label6.Text = "Registración de suplementos"
         '
+        'Button1
+        '
+        Me.Button1.Enabled = False
+        Me.Button1.Location = New System.Drawing.Point(215, 333)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(57, 50)
+        Me.Button1.TabIndex = 51
+        Me.Button1.Text = "Guardar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'RegistracionSuplemento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(443, 397)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ckb_activo)
         Me.Controls.Add(Me.cmb_proveedor)
@@ -225,4 +237,5 @@ Partial Class RegistracionSuplemento
     Friend WithEvents btn_guardar As Windows.Forms.Button
     Friend WithEvents btn_nuevo As Windows.Forms.Button
     Friend WithEvents Label6 As Windows.Forms.Label
+    Friend WithEvents Button1 As Windows.Forms.Button
 End Class

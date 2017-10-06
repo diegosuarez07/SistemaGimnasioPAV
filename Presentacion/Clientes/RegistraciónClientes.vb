@@ -1,5 +1,8 @@
 ﻿Imports System.Data.SqlClient
+
 Public Class RegistraciónClientes
+    Dim cadenaConexion As String = "Data Source=DESKTOP-PP344HH;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+
     Public nombre, apellido, domicilio, nroTelefono, dni As String
     Public fechaNacimiento As DateTime
     Public cuota, planEntren As Integer
@@ -21,7 +24,27 @@ Public Class RegistraciónClientes
     End Sub
 
     Private Sub RegistraciónClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Dim conexion As New Data.SqlClient.SqlConnection
+        Dim cmd As New Data.SqlClient.SqlCommand
+        Dim tablaA As New Data.DataTable
+        Dim tablaB As New Data.DataTable
+        conexion.ConnectionString = cadenaConexion
+        conexion.Open()
+        cmd.Connection = conexion
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "Select * from PlanEntrenamiento where planActivo = 1"
+        tablaA.Load(cmd.ExecuteReader())
+        cmbPlanEntrenamiento.DataSource = tablaA
+        cmbPlanEntrenamiento.DisplayMember = "planNombre"
+        cmbPlanEntrenamiento.ValueMember = "planId"
+        cmd.CommandText = "Select * from Cuota"
+        tablaB.Load(cmd.ExecuteReader())
+        cmbCuota.DataSource = tablaB
+        cmbCuota.ValueMember = "cuoid"
+        cmbCuota.DisplayMember = "cuoNombre"
+        conexion.Close()
+        cmbPlanEntrenamiento.SelectedIndex = -1
+        cmbCuota.SelectedIndex = -1
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
@@ -43,11 +66,10 @@ Public Class RegistraciónClientes
         activo = True
 
 
-        Dim cadenaConexion As String = "Provider=.NET Framework Data Provider for SQL Server;Data Source=localhost;Initial Catalog=SistemaGimnasio;Integrated Security=True"
-        Dim conexion As New Data.OleDb.OleDbConnection
+        Dim conexion As New Data.SqlClient.SqlConnection
         conexion.ConnectionString = cadenaConexion
 
-        Dim cmd As New Data.OleDb.OleDbCommand
+        Dim cmd As New Data.SqlClient.SqlCommand
         conexion.Open()
         Dim consulta As String = ""
 
@@ -56,11 +78,11 @@ Public Class RegistraciónClientes
         consulta &= ", '" & Me.nombre & "'"
         consulta &= ", '" & Me.dni & "'"
         consulta &= ", '" & Me.nroTelefono & "'"
-        consulta &= ", " & Me.fechaNacimiento & ""
+        consulta &= ", " & Date.Now.Date & ""
         consulta &= ", '" & Me.domicilio & "'"
+        consulta &= ", " & Me.cmbPlanEntrenamiento.SelectedValue & ""
+        consulta &= ", " & Me.cmbCuota.SelectedValue & ""
         consulta &= ", " & 1 & ""
-        consulta &= ", " & 1 & ""
-        consulta &= ", " & Me.activo & ""
 
 
         cmd.CommandType = CommandType.Text
