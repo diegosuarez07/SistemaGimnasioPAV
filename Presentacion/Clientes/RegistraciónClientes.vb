@@ -74,7 +74,7 @@ Public Class RegistraciónClientes
         Dim consulta As String = ""
 
         consulta = "insert into Cliente (cliApellido, cliNombre, cliDni, cliTelefono, cliFechaNacimiento, cliDomicilio, planId, cuoId, cliActivo) "
-        consulta &= "values (Me.apellido, Me.nombre, Me.dni, Me.nroTelefono, Date.Now.Date, Me.domicilio, Me.cmbPlanEntrenamiento.SelectedValue, Me.cmbCuota.SelectedValue, 1) "
+        consulta &= "values ('" & Me.txtApellido.Text & "','" & Me.txtNombre.Text & "','" & Me.txtDni.Text & "','" & Me.txtTelefono.Text & "'," & Date.Now.Date & ",'" & Me.txtDomicilio.Text & "'," & Me.cmbPlanEntrenamiento.SelectedValue & "," & Me.cmbCuota.SelectedValue & "," & 1 & ") "
         cmd.CommandType = CommandType.Text
         cmd.CommandText = consulta
         cmd.Connection = conexion
