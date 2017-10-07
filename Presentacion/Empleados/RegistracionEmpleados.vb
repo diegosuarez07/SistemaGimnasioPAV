@@ -78,7 +78,7 @@ Public Class RegistracionEmpleados
         conexion.Open()
         cmd.Connection = conexion
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "Select * from Empleado where empApellido = " & txt_apellido.Text
+        cmd.CommandText = "Select * from Empleado where empApellido =" & txt_apellido.Text
         tablaA.Load(cmd.ExecuteReader())
         If tablaA.Rows.Count = 0 Then
             MessageBox.Show("No existe el Empleado")
