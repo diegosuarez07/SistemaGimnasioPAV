@@ -48,11 +48,8 @@
 
         Dim consulta As String = ""
 
-        consulta = "insert into ProveedorMaquina (provMaquinDescripcion, provMaquinDomicilio, provMaquinTelefono, provMaquinActivo) "
-        consulta &= "values ('" & Me.descProveedor & "'"
-        consulta &= ", '" & Me.domicilioProveedor & "'"
-        consulta &= ", '" & Me.nroTelProveedor & "'"
-        consulta &= ", " & Me.activoProveedor & ")"
+        consulta = "insert into ProveedorMaquina (provMaquinDescripcion,provMaquinDomicilio,provMaquinTelefono,provMaquinActivo)"
+        consulta &= "values ('" & Me.txtDescripcion.Text & "','" & Me.txtDomicilio.Text & "','" & Me.txtTelefono.Text & "'," & 1 & ") "
 
 
         cmd.CommandType = CommandType.Text
