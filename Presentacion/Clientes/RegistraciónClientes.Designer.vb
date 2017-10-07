@@ -32,7 +32,7 @@ Partial Class RegistraciónClientes
         Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.btnSalir = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnRegistrar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -42,6 +42,8 @@ Partial Class RegistraciónClientes
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -101,39 +103,39 @@ Partial Class RegistraciónClientes
         '
         'txtApellido
         '
-        Me.txtApellido.Location = New System.Drawing.Point(125, 114)
+        Me.txtApellido.Location = New System.Drawing.Point(125, 76)
         Me.txtApellido.Name = "txtApellido"
         Me.txtApellido.Size = New System.Drawing.Size(153, 20)
         Me.txtApellido.TabIndex = 14
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(125, 81)
+        Me.txtNombre.Location = New System.Drawing.Point(125, 111)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(153, 20)
         Me.txtNombre.TabIndex = 13
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(336, 383)
+        Me.btnSalir.Location = New System.Drawing.Point(343, 383)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(75, 51)
         Me.btnSalir.TabIndex = 23
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnRegistrar
         '
-        Me.Button2.Location = New System.Drawing.Point(172, 405)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(106, 23)
-        Me.Button2.TabIndex = 22
-        Me.Button2.Text = " Registrar cliente"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnRegistrar.Location = New System.Drawing.Point(119, 411)
+        Me.btnRegistrar.Name = "btnRegistrar"
+        Me.btnRegistrar.Size = New System.Drawing.Size(106, 23)
+        Me.btnRegistrar.TabIndex = 22
+        Me.btnRegistrar.Text = " Registrar cliente"
+        Me.btnRegistrar.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(48, 405)
+        Me.Button1.Location = New System.Drawing.Point(12, 411)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(101, 23)
         Me.Button1.TabIndex = 21
@@ -188,7 +190,7 @@ Partial Class RegistraciónClientes
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(75, 114)
+        Me.Label5.Location = New System.Drawing.Point(75, 79)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(44, 13)
         Me.Label5.TabIndex = 26
@@ -206,17 +208,38 @@ Partial Class RegistraciónClientes
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(76, 81)
+        Me.Label3.Location = New System.Drawing.Point(76, 111)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 13)
         Me.Label3.TabIndex = 24
         Me.Label3.Text = "Nombre"
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Location = New System.Drawing.Point(295, 73)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(106, 23)
+        Me.btnBuscar.TabIndex = 32
+        Me.btnBuscar.Text = "Buscar cliente"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(231, 411)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(106, 23)
+        Me.btnEliminar.TabIndex = 33
+        Me.btnEliminar.Text = "Eliminar cliente"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        Me.btnEliminar.Visible = False
         '
         'RegistraciónClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(423, 446)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -226,7 +249,7 @@ Partial Class RegistraciónClientes
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnSalir)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnRegistrar)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.cmbCuota)
         Me.Controls.Add(Me.cmbPlanEntrenamiento)
@@ -255,7 +278,7 @@ Partial Class RegistraciónClientes
     Friend WithEvents txtApellido As System.Windows.Forms.TextBox
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
     Friend WithEvents btnSalir As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btnRegistrar As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
@@ -265,4 +288,6 @@ Partial Class RegistraciónClientes
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents btnBuscar As Windows.Forms.Button
+    Friend WithEvents btnEliminar As Windows.Forms.Button
 End Class
