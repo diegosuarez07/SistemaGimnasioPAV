@@ -30,6 +30,26 @@ Public Class RegistracionEmpleados
     End Sub
 
     Private Sub btn_guardar_Click(sender As Object, e As EventArgs) Handles btn_guardar.Click
+        If btn_guardar.Text = "Guardar" Then
+            RegistrarEmpleado()
+            MsgBox("Empleado registrado correctamente")
+            LimpiarCampos()
+        Else
+            'Aca gaston hacete el private sub de ModificarEmpleado()
+            'Msgbox("Empleado modificado correctamente")
+            'limpiarCampos()
+        End If
+
+    End Sub
+
+    Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btn_nuevo_Click(sender As Object, e As EventArgs) Handles btn_nuevo.Click
+        LimpiarCampos()
+    End Sub
+    Private Sub RegistrarEmpleado()
         Dim conexion As New Data.SqlClient.SqlConnection
         Dim cmd As New Data.SqlClient.SqlCommand
         Dim tablaA As New Data.DataTable
@@ -47,15 +67,6 @@ Public Class RegistracionEmpleados
         cmb_horario.SelectedIndex = -1
         MsgBox("Empleado registrado exitosamente")
     End Sub
-
-    Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
-        Me.Close()
-    End Sub
-
-    Private Sub btn_nuevo_Click(sender As Object, e As EventArgs) Handles btn_nuevo.Click
-        LimpiarCampos()
-    End Sub
-
 
     Private Sub LimpiarCampos()
 
@@ -78,7 +89,7 @@ Public Class RegistracionEmpleados
         conexion.Open()
         cmd.Connection = conexion
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "Select * from Empleado where empApellido =" & txt_apellido.Text
+        cmd.CommandText = "Select * from Empleado where empApellido = '" & txt_apellido.Text & "'"
         tablaA.Load(cmd.ExecuteReader())
         If tablaA.Rows.Count = 0 Then
             MessageBox.Show("No existe el Empleado")
@@ -90,6 +101,7 @@ Public Class RegistracionEmpleados
             cmb_funcion.SelectedValue = tablaA.Rows(0).Item(4)
             txt_direccion.Text = tablaA.Rows(0).Item(5).ToString()
             cmb_horario.SelectedValue = tablaA.Rows(0).Item(6).ToString()
+            btn_guardar.Text = "Modificar"
             If tablaA.Rows(0).Item(7).ToString() = 1 Then
                 checkActivo.Checked = True
             Else

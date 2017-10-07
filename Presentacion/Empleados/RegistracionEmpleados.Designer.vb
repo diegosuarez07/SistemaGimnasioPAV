@@ -108,6 +108,7 @@ Partial Class RegistracionEmpleados
         'txt_documento
         '
         Me.txt_documento.Location = New System.Drawing.Point(134, 144)
+        Me.txt_documento.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.txt_documento.Name = "txt_documento"
         Me.txt_documento.Size = New System.Drawing.Size(222, 20)
         Me.txt_documento.TabIndex = 49
@@ -176,7 +177,7 @@ Partial Class RegistracionEmpleados
         '
         Me.btn_guardar.Location = New System.Drawing.Point(93, 344)
         Me.btn_guardar.Name = "btn_guardar"
-        Me.btn_guardar.Size = New System.Drawing.Size(57, 50)
+        Me.btn_guardar.Size = New System.Drawing.Size(74, 50)
         Me.btn_guardar.TabIndex = 54
         Me.btn_guardar.Text = "Guardar"
         Me.btn_guardar.UseVisualStyleBackColor = True
