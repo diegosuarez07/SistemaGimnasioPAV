@@ -36,6 +36,8 @@ Partial Class RegistracionSuplemento
         Me.btn_salir = New System.Windows.Forms.Button()
         Me.btn_guardar = New System.Windows.Forms.Button()
         Me.btn_nuevo = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.txt_precioventa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txt_preciocompra, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txt_codigo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,7 +47,7 @@ Partial Class RegistracionSuplemento
         '
         Me.ckb_activo.AutoSize = True
         Me.ckb_activo.Enabled = False
-        Me.ckb_activo.Location = New System.Drawing.Point(139, 255)
+        Me.ckb_activo.Location = New System.Drawing.Point(157, 287)
         Me.ckb_activo.Name = "ckb_activo"
         Me.ckb_activo.Size = New System.Drawing.Size(56, 17)
         Me.ckb_activo.TabIndex = 49
@@ -56,7 +58,7 @@ Partial Class RegistracionSuplemento
         '
         Me.cmb_proveedor.Enabled = False
         Me.cmb_proveedor.FormattingEnabled = True
-        Me.cmb_proveedor.Location = New System.Drawing.Point(139, 210)
+        Me.cmb_proveedor.Location = New System.Drawing.Point(157, 242)
         Me.cmb_proveedor.Name = "cmb_proveedor"
         Me.cmb_proveedor.Size = New System.Drawing.Size(216, 21)
         Me.cmb_proveedor.TabIndex = 48
@@ -64,7 +66,7 @@ Partial Class RegistracionSuplemento
         'txt_nombre
         '
         Me.txt_nombre.Enabled = False
-        Me.txt_nombre.Location = New System.Drawing.Point(141, 74)
+        Me.txt_nombre.Location = New System.Drawing.Point(159, 106)
         Me.txt_nombre.Name = "txt_nombre"
         Me.txt_nombre.Size = New System.Drawing.Size(214, 20)
         Me.txt_nombre.TabIndex = 47
@@ -72,7 +74,7 @@ Partial Class RegistracionSuplemento
         'txt_precioventa
         '
         Me.txt_precioventa.Enabled = False
-        Me.txt_precioventa.Location = New System.Drawing.Point(139, 166)
+        Me.txt_precioventa.Location = New System.Drawing.Point(157, 198)
         Me.txt_precioventa.Maximum = New Decimal(New Integer() {-1530494976, 232830, 0, 0})
         Me.txt_precioventa.Name = "txt_precioventa"
         Me.txt_precioventa.Size = New System.Drawing.Size(216, 20)
@@ -81,7 +83,7 @@ Partial Class RegistracionSuplemento
         'txt_preciocompra
         '
         Me.txt_preciocompra.Enabled = False
-        Me.txt_preciocompra.Location = New System.Drawing.Point(139, 119)
+        Me.txt_preciocompra.Location = New System.Drawing.Point(157, 151)
         Me.txt_preciocompra.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.txt_preciocompra.Name = "txt_preciocompra"
         Me.txt_preciocompra.Size = New System.Drawing.Size(216, 20)
@@ -89,7 +91,7 @@ Partial Class RegistracionSuplemento
         '
         'txt_codigo
         '
-        Me.txt_codigo.Location = New System.Drawing.Point(141, 34)
+        Me.txt_codigo.Location = New System.Drawing.Point(159, 66)
         Me.txt_codigo.Maximum = New Decimal(New Integer() {1215752192, 23, 0, 0})
         Me.txt_codigo.Name = "txt_codigo"
         Me.txt_codigo.Size = New System.Drawing.Size(216, 20)
@@ -98,7 +100,7 @@ Partial Class RegistracionSuplemento
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(46, 213)
+        Me.Label5.Location = New System.Drawing.Point(64, 245)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(56, 13)
         Me.Label5.TabIndex = 43
@@ -107,7 +109,7 @@ Partial Class RegistracionSuplemento
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(46, 173)
+        Me.Label4.Location = New System.Drawing.Point(64, 205)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(68, 13)
         Me.Label4.TabIndex = 42
@@ -116,7 +118,7 @@ Partial Class RegistracionSuplemento
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(45, 126)
+        Me.Label3.Location = New System.Drawing.Point(63, 158)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(76, 13)
         Me.Label3.TabIndex = 41
@@ -125,7 +127,7 @@ Partial Class RegistracionSuplemento
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(45, 81)
+        Me.Label2.Location = New System.Drawing.Point(63, 113)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 13)
         Me.Label2.TabIndex = 40
@@ -134,7 +136,7 @@ Partial Class RegistracionSuplemento
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(46, 41)
+        Me.Label1.Location = New System.Drawing.Point(64, 73)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(40, 13)
         Me.Label1.TabIndex = 39
@@ -142,7 +144,7 @@ Partial Class RegistracionSuplemento
         '
         'btn_salir
         '
-        Me.btn_salir.Location = New System.Drawing.Point(394, 333)
+        Me.btn_salir.Location = New System.Drawing.Point(384, 356)
         Me.btn_salir.Name = "btn_salir"
         Me.btn_salir.Size = New System.Drawing.Size(42, 29)
         Me.btn_salir.TabIndex = 38
@@ -152,7 +154,7 @@ Partial Class RegistracionSuplemento
         'btn_guardar
         '
         Me.btn_guardar.Enabled = False
-        Me.btn_guardar.Location = New System.Drawing.Point(119, 312)
+        Me.btn_guardar.Location = New System.Drawing.Point(115, 333)
         Me.btn_guardar.Name = "btn_guardar"
         Me.btn_guardar.Size = New System.Drawing.Size(57, 50)
         Me.btn_guardar.TabIndex = 36
@@ -161,18 +163,40 @@ Partial Class RegistracionSuplemento
         '
         'btn_nuevo
         '
-        Me.btn_nuevo.Location = New System.Drawing.Point(41, 312)
+        Me.btn_nuevo.Location = New System.Drawing.Point(37, 333)
         Me.btn_nuevo.Name = "btn_nuevo"
         Me.btn_nuevo.Size = New System.Drawing.Size(53, 50)
         Me.btn_nuevo.TabIndex = 37
         Me.btn_nuevo.Text = "Nuevo"
         Me.btn_nuevo.UseVisualStyleBackColor = True
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Gill Sans MT", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(49, 9)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(355, 40)
+        Me.Label6.TabIndex = 50
+        Me.Label6.Text = "Registración de suplementos"
+        '
+        'Button1
+        '
+        Me.Button1.Enabled = False
+        Me.Button1.Location = New System.Drawing.Point(215, 333)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(57, 50)
+        Me.Button1.TabIndex = 51
+        Me.Button1.Text = "Guardar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'RegistracionSuplemento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(476, 397)
+        Me.ClientSize = New System.Drawing.Size(443, 397)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ckb_activo)
         Me.Controls.Add(Me.cmb_proveedor)
         Me.Controls.Add(Me.txt_nombre)
@@ -188,6 +212,7 @@ Partial Class RegistracionSuplemento
         Me.Controls.Add(Me.btn_guardar)
         Me.Controls.Add(Me.btn_nuevo)
         Me.Name = "RegistracionSuplemento"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RegistracionSuplemento"
         CType(Me.txt_precioventa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txt_preciocompra, System.ComponentModel.ISupportInitialize).EndInit()
@@ -211,4 +236,6 @@ Partial Class RegistracionSuplemento
     Friend WithEvents btn_salir As Windows.Forms.Button
     Friend WithEvents btn_guardar As Windows.Forms.Button
     Friend WithEvents btn_nuevo As Windows.Forms.Button
+    Friend WithEvents Label6 As Windows.Forms.Label
+    Friend WithEvents Button1 As Windows.Forms.Button
 End Class

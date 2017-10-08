@@ -22,4 +22,14 @@
         Dim regProveedores As New RegistraciónProveedores
         regProveedores.ShowDialog()
     End Sub
+
+    Private Sub RegistrToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrToolStripMenuItem.Click
+        Dim regEmpleados As New RegistracionEmpleados()
+        regEmpleados.ShowDialog()
+    End Sub
+
+    Private Sub RegistraciónToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles RegistraciónToolStripMenuItem3.Click
+        Dim regSuplementos As New RegistracionSuplemento
+        regSuplementos.ShowDialog()
+    End Sub
 End Class

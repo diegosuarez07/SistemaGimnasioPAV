@@ -6,7 +6,7 @@ Public Class RegistracionEmpleados
         Dim cmd As New Data.SqlClient.SqlCommand
         Dim tablaA As New Data.DataTable
         Dim tablaB As New Data.DataTable
-        conexion.ConnectionString = "Data Source=GASTON-5132\SQLEXPRESS;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+        conexion.ConnectionString = "Data Source=DESKTOP-PP344HH;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
         conexion.Open()
         cmd.Connection = conexion
         cmd.CommandType = CommandType.Text
@@ -19,21 +19,77 @@ Public Class RegistracionEmpleados
         cmb_funcion.ValueMember = "empFuncionId"
         cmb_funcion.SelectedIndex = -1
         cmb_horario.DataSource = tablaB
-        cmb_horario.DisplayMember = ""
-        cmb_horario.ValueMember = ""
+        cmb_horario.DisplayMember = "empHoraInicio"
+        cmb_horario.ValueMember = "empHorId"
         cmb_horario.SelectedIndex = -1
         conexion.Close()
     End Sub
 
     Private Sub btn_buscar_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btn_guardar_Click(sender As Object, e As EventArgs) Handles btn_guardar.Click
+        If btn_guardar.Text = "Guardar" Then
+            RegistrarEmpleado()
+            MsgBox("Empleado registrado correctamente")
+            LimpiarCampos()
+        Else
+            'Aca gaston hacete el private sub de ModificarEmpleado()
+            'Msgbox("Empleado modificado correctamente")
+            'limpiarCampos()
+        End If
+
+    End Sub
+
+    Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btn_nuevo_Click(sender As Object, e As EventArgs) Handles btn_nuevo.Click
+        LimpiarCampos()
+    End Sub
+    Private Sub RegistrarEmpleado()
         Dim conexion As New Data.SqlClient.SqlConnection
         Dim cmd As New Data.SqlClient.SqlCommand
         Dim tablaA As New Data.DataTable
-        conexion.ConnectionString = "Data Source=GASTON-5132\SQLEXPRESS;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+        conexion.ConnectionString = "Data Source=DESKTOP-PP344HH;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
         conexion.Open()
         cmd.Connection = conexion
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "Select * from Empleado where empApellido = " & txt_apellido.Text
+        cmd.CommandText = "Insert into Empleado (empApellido, empNombre, empFuncionId, empDomicilio, empHorId ,empActivo) values(" & txt_apellido.Text & "','" & txt_nombre.Text & "'," & cmb_funcion.SelectedValue & "," & cmb_horario.SelectedValue & ",1"
+        cmd.ExecuteNonQuery()
+        txt_apellido.Text = 0
+        txt_nombre.Text = ""
+        txt_direccion.Text = 0
+        txt_documento.Value = 0
+        cmb_funcion.SelectedIndex = -1
+        cmb_horario.SelectedIndex = -1
+        MsgBox("Empleado registrado exitosamente")
+    End Sub
+
+    Private Sub LimpiarCampos()
+
+        txt_apellido.Text = ""
+        txt_nombre.Text = ""
+        txt_direccion.Text = ""
+        cmb_funcion.SelectedValue = 0
+        cmb_horario.SelectedIndex = -1
+        checkActivo.Checked = False
+
+
+
+    End Sub
+
+    Private Sub btn_buscar_Click_1(sender As Object, e As EventArgs) Handles btn_buscar.Click
+        Dim conexion As New Data.SqlClient.SqlConnection
+        Dim cmd As New Data.SqlClient.SqlCommand
+        Dim tablaA As New Data.DataTable
+        conexion.ConnectionString = "Data Source=DESKTOP-PP344HH;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+        conexion.Open()
+        cmd.Connection = conexion
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "Select * from Empleado where empApellido = '" & txt_apellido.Text & "'"
         tablaA.Load(cmd.ExecuteReader())
         If tablaA.Rows.Count = 0 Then
             MessageBox.Show("No existe el Empleado")
@@ -45,30 +101,13 @@ Public Class RegistracionEmpleados
             cmb_funcion.SelectedValue = tablaA.Rows(0).Item(4)
             txt_direccion.Text = tablaA.Rows(0).Item(5).ToString()
             cmb_horario.SelectedValue = tablaA.Rows(0).Item(6).ToString()
+            btn_guardar.Text = "Modificar"
             If tablaA.Rows(0).Item(7).ToString() = 1 Then
-                CheckBox1.Checked = True
+                checkActivo.Checked = True
             Else
-                CheckBox1.Checked = False
+                checkActivo.Checked = False
 
             End If
         End If
-    End Sub
-
-    Private Sub btn_guardar_Click(sender As Object, e As EventArgs) Handles btn_guardar.Click
-        Dim conexion As New Data.SqlClient.SqlConnection
-        Dim cmd As New Data.SqlClient.SqlCommand
-        Dim tablaA As New Data.DataTable
-        conexion.ConnectionString = "Data Source=GASTON-5132\SQLEXPRESS;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
-        conexion.Open()
-        cmd.Connection = conexion
-        cmd.CommandType = CommandType.Text
-        cmd.CommandText = "Insert into Empleado (empId , empApellido, empNombre, empFuncionId, empDomicilio, empHorId ,empActivo) values( , '" & txt_apellido.Text & "','" & txt_nombre.Text & "'," & cmb_funcion.SelectedValue & ",'" & cmb_horario.SelectedValue & ",1"
-        cmd.ExecuteNonQuery()
-        txt_apellido.Text = 0
-        txt_nombre.Text = ""
-        txt_direccion.Text = 0
-        txt_documento.Value = 0
-        cmb_funcion.SelectedIndex = -1
-        cmb_horario.SelectedIndex = -1
     End Sub
 End Class

@@ -57,21 +57,21 @@ Partial Class RegistraciónProveedores
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(94, 202)
+        Me.txtTelefono.Location = New System.Drawing.Point(132, 199)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(153, 20)
         Me.txtTelefono.TabIndex = 7
         '
         'txtDomicilio
         '
-        Me.txtDomicilio.Location = New System.Drawing.Point(94, 163)
+        Me.txtDomicilio.Location = New System.Drawing.Point(132, 160)
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.Size = New System.Drawing.Size(153, 20)
         Me.txtDomicilio.TabIndex = 6
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(94, 130)
+        Me.txtDescripcion.Location = New System.Drawing.Point(132, 127)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(153, 20)
         Me.txtDescripcion.TabIndex = 5
@@ -106,7 +106,7 @@ Partial Class RegistraciónProveedores
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(39, 166)
+        Me.Label5.Location = New System.Drawing.Point(77, 163)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(49, 13)
         Me.Label5.TabIndex = 13
@@ -115,7 +115,7 @@ Partial Class RegistraciónProveedores
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(19, 205)
+        Me.Label4.Location = New System.Drawing.Point(57, 202)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(69, 13)
         Me.Label4.TabIndex = 12
@@ -124,11 +124,11 @@ Partial Class RegistraciónProveedores
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(25, 133)
+        Me.Label3.Location = New System.Drawing.Point(27, 130)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 13)
+        Me.Label3.Size = New System.Drawing.Size(105, 13)
         Me.Label3.TabIndex = 11
-        Me.Label3.Text = "Descripción"
+        Me.Label3.Text = "Nombre/Descripcion"
         '
         'RegistraciónProveedores
         '

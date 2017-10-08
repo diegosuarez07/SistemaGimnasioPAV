@@ -35,13 +35,19 @@ Partial Class Menu
         Me.ConsultarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnSalir = New System.Windows.Forms.Button()
+        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultarToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SuplementosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistraciónToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultarToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.Tomato
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.MaquinasToolStripMenuItem, Me.ProveedoresToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.MaquinasToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.SuplementosToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(465, 24)
@@ -77,13 +83,13 @@ Partial Class Menu
         'RegistraciónToolStripMenuItem1
         '
         Me.RegistraciónToolStripMenuItem1.Name = "RegistraciónToolStripMenuItem1"
-        Me.RegistraciónToolStripMenuItem1.Size = New System.Drawing.Size(139, 22)
+        Me.RegistraciónToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.RegistraciónToolStripMenuItem1.Text = "Registración"
         '
         'ConsultarToolStripMenuItem1
         '
         Me.ConsultarToolStripMenuItem1.Name = "ConsultarToolStripMenuItem1"
-        Me.ConsultarToolStripMenuItem1.Size = New System.Drawing.Size(139, 22)
+        Me.ConsultarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.ConsultarToolStripMenuItem1.Text = "Consultar"
         '
         'ProveedoresToolStripMenuItem
@@ -128,6 +134,44 @@ Partial Class Menu
         Me.btnSalir.Text = "SALIR"
         Me.btnSalir.UseVisualStyleBackColor = False
         '
+        'EmpleadosToolStripMenuItem
+        '
+        Me.EmpleadosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrToolStripMenuItem, Me.ConsultarToolStripMenuItem3})
+        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
+        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
+        '
+        'RegistrToolStripMenuItem
+        '
+        Me.RegistrToolStripMenuItem.Name = "RegistrToolStripMenuItem"
+        Me.RegistrToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RegistrToolStripMenuItem.Text = "Registración"
+        '
+        'ConsultarToolStripMenuItem3
+        '
+        Me.ConsultarToolStripMenuItem3.Name = "ConsultarToolStripMenuItem3"
+        Me.ConsultarToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
+        Me.ConsultarToolStripMenuItem3.Text = "Consultar"
+        '
+        'SuplementosToolStripMenuItem
+        '
+        Me.SuplementosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistraciónToolStripMenuItem3, Me.ConsultarToolStripMenuItem4})
+        Me.SuplementosToolStripMenuItem.Name = "SuplementosToolStripMenuItem"
+        Me.SuplementosToolStripMenuItem.Size = New System.Drawing.Size(88, 20)
+        Me.SuplementosToolStripMenuItem.Text = "Suplementos"
+        '
+        'RegistraciónToolStripMenuItem3
+        '
+        Me.RegistraciónToolStripMenuItem3.Name = "RegistraciónToolStripMenuItem3"
+        Me.RegistraciónToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
+        Me.RegistraciónToolStripMenuItem3.Text = "Registración"
+        '
+        'ConsultarToolStripMenuItem4
+        '
+        Me.ConsultarToolStripMenuItem4.Name = "ConsultarToolStripMenuItem4"
+        Me.ConsultarToolStripMenuItem4.Size = New System.Drawing.Size(152, 22)
+        Me.ConsultarToolStripMenuItem4.Text = "Consultar"
+        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -162,4 +206,10 @@ Partial Class Menu
     Friend WithEvents ConsultarToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnSalir As System.Windows.Forms.Button
+    Friend WithEvents EmpleadosToolStripMenuItem As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RegistrToolStripMenuItem As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ConsultarToolStripMenuItem3 As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SuplementosToolStripMenuItem As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RegistraciónToolStripMenuItem3 As Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ConsultarToolStripMenuItem4 As Windows.Forms.ToolStripMenuItem
 End Class
