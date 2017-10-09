@@ -30,3 +30,6 @@ C:\Users\Usuario\Desktop\SistemaGimnasioPAV-master\Presentacion\obj\Debug\Presen
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.RegistracionMaquinas.resources
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.RegistracionEmpleados.resources
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.RegistracionSuplemento.resources
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\bin\Debug\Datos.dll
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\bin\Debug\Datos.pdb
+C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Presentacion\bin\Debug\Datos.xml

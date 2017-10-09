@@ -161,6 +161,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.vbproj">
+      <Project>{63672b77-77dc-4aa7-8513-50c4da1e867e}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Negocio\Negocio.vbproj">
       <Project>{558a2030-229d-4122-b4e4-4d0fa8f80e1e}</Project>
       <Name>Negocio</Name>
