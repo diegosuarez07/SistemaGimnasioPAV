@@ -99,20 +99,11 @@ Public Class RegistraciónClientes
         planEntren = cmbPlanEntrenamiento.SelectedValue
         activo = True
 
-
-        Dim conexion As New Data.SqlClient.SqlConnection
-        conexion.ConnectionString = cadenaConexion
-
-        Dim cmd As New Data.SqlClient.SqlCommand
-        conexion.Open()
         Dim consulta As String = ""
 
         consulta = "update Cliente Set cliApellido = '" & txtApellido.Text & "', cliNombre = '" & txtNombre.Text & "', cliDni = '" & txtDni.Text & "', cliTelefono = '" & txtTelefono.Text & "', cliFechaNacimiento = " & dtpFechaNacimiento.Value & ", cliDomicilio = '" & txtDomicilio.Text & "', planId = " & cmbPlanEntrenamiento.SelectedValue & ", cuoId = " & cmbCuota.SelectedValue & ", cliActivo = " & 1 & " where cliId = " & id
-        cmd.CommandType = CommandType.Text
-        cmd.CommandText = consulta
-        cmd.Connection = conexion
-        cmd.ExecuteNonQuery()
-        conexion.Close()
+        Datos.AccesoBD.ejecutarConsulta(consulta)
+
 
     End Sub
 
