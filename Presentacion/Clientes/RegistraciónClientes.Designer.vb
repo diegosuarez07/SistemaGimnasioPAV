@@ -130,7 +130,7 @@ Partial Class RegistraciónClientes
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(106, 23)
         Me.btnRegistrar.TabIndex = 22
-        Me.btnRegistrar.Text = " Registrar cliente"
+        Me.btnRegistrar.Text = "Registrar cliente"
         Me.btnRegistrar.UseVisualStyleBackColor = True
         '
         'Button1

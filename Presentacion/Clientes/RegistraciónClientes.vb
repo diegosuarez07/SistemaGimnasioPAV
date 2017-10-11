@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports Datos
 
 Public Class RegistraciónClientes
     Dim cadenaConexion As String = "Data Source=DESKTOP-PP344HH;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
@@ -40,7 +41,7 @@ Public Class RegistraciónClientes
         conexion.Open()
         cmd.Connection = conexion
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "Select * from Cliente where cliApellido = '" & txtApellido.Text & "'" & " and cliActivo = 1"
+        cmd.CommandText = "Select * from Cliente where cliApellido = '" & txtApellido.Text & "'" & " and cliActivo = " & 1
         tablaA.Load(cmd.ExecuteReader())
         If tablaA.Rows.Count = 0 Then
             MsgBox("No existe el Cliente")
@@ -98,20 +99,11 @@ Public Class RegistraciónClientes
         planEntren = cmbPlanEntrenamiento.SelectedValue
         activo = True
 
-
-        Dim conexion As New Data.SqlClient.SqlConnection
-        conexion.ConnectionString = cadenaConexion
-
-        Dim cmd As New Data.SqlClient.SqlCommand
-        conexion.Open()
         Dim consulta As String = ""
 
-        consulta = "update Cliente set cliApellido = '" & txtApellido.Text & "', cliNombre = '" & txtNombre.Text & "', cliDni = '" & txtDni.Text & "', cliTelefono = '" & txtTelefono.Text & "', cliFechaNacimiento = " & dtpFechaNacimiento.Value & ", cliDomicilio = '" & txtDomicilio.Text & "', planId = " & cmbPlanEntrenamiento.SelectedValue & ", cuoId = " & cmbCuota.SelectedValue & ", cliActivo = " & 1 & " where cliId = " & id
-        cmd.CommandType = CommandType.Text
-        cmd.CommandText = consulta
-        cmd.Connection = conexion
-        cmd.ExecuteNonQuery()
-        conexion.Close()
+        consulta = "update Cliente Set cliApellido = '" & txtApellido.Text & "', cliNombre = '" & txtNombre.Text & "', cliDni = '" & txtDni.Text & "', cliTelefono = '" & txtTelefono.Text & "', cliFechaNacimiento = " & dtpFechaNacimiento.Value & ", cliDomicilio = '" & txtDomicilio.Text & "', planId = " & cmbPlanEntrenamiento.SelectedValue & ", cuoId = " & cmbCuota.SelectedValue & ", cliActivo = " & 1 & " where cliId = " & id
+        Datos.AccesoBD.ejecutarConsulta(consulta)
+
 
     End Sub
 
@@ -124,19 +116,14 @@ Public Class RegistraciónClientes
     End Sub
 
     Private Sub EliminarCliente(ByVal id As Integer)
-        Dim conexion As New Data.SqlClient.SqlConnection
-        conexion.ConnectionString = cadenaConexion
 
-        Dim cmd As New Data.SqlClient.SqlCommand
-        conexion.Open()
         Dim consulta As String = ""
 
         consulta = "update Cliente set cliActivo = " & 0 & " where cliId = " & id
-        cmd.CommandType = CommandType.Text
-        cmd.CommandText = consulta
-        cmd.Connection = conexion
-        cmd.ExecuteNonQuery()
-        conexion.Close()
+        Datos.AccesoBD.ejecutarConsulta(consulta)
+
+
+
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
@@ -157,21 +144,14 @@ Public Class RegistraciónClientes
         planEntren = cmbPlanEntrenamiento.SelectedValue
         activo = True
 
-
-        Dim conexion As New Data.SqlClient.SqlConnection
-        conexion.ConnectionString = cadenaConexion
-
-        Dim cmd As New Data.SqlClient.SqlCommand
-        conexion.Open()
         Dim consulta As String = ""
 
         consulta = "insert into Cliente (cliApellido, cliNombre, cliDni, cliTelefono, cliFechaNacimiento, cliDomicilio, planId, cuoId, cliActivo) "
         consulta &= "values ('" & Me.txtApellido.Text & "','" & Me.txtNombre.Text & "','" & Me.txtDni.Text & "','" & Me.txtTelefono.Text & "'," & Date.Now.Date & ",'" & Me.txtDomicilio.Text & "'," & Me.cmbPlanEntrenamiento.SelectedValue & "," & Me.cmbCuota.SelectedValue & "," & 1 & ") "
-        cmd.CommandType = CommandType.Text
-        cmd.CommandText = consulta
-        cmd.Connection = conexion
-        cmd.ExecuteNonQuery()
-        conexion.Close()
+
+        Datos.AccesoBD.ejecutarConsulta(consulta)
+
+
 
     End Sub
 
