@@ -33,13 +33,15 @@ Partial Class RegistraciónProveedores
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btn_buscar = New System.Windows.Forms.Button()
+        Me.btn_eliminar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Gill Sans MT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(126, 65)
+        Me.Label2.Location = New System.Drawing.Point(316, 31)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(104, 34)
         Me.Label2.TabIndex = 3
@@ -78,7 +80,7 @@ Partial Class RegistraciónProveedores
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(11, 261)
+        Me.btnLimpiar.Location = New System.Drawing.Point(11, 291)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(121, 23)
         Me.btnLimpiar.TabIndex = 10
@@ -87,7 +89,7 @@ Partial Class RegistraciónProveedores
         '
         'btnSsalir
         '
-        Me.btnSsalir.Location = New System.Drawing.Point(279, 240)
+        Me.btnSsalir.Location = New System.Drawing.Point(380, 270)
         Me.btnSsalir.Name = "btnSsalir"
         Me.btnSsalir.Size = New System.Drawing.Size(59, 44)
         Me.btnSsalir.TabIndex = 9
@@ -96,7 +98,7 @@ Partial Class RegistraciónProveedores
         '
         'btnRegistrar
         '
-        Me.btnRegistrar.Location = New System.Drawing.Point(142, 261)
+        Me.btnRegistrar.Location = New System.Drawing.Point(138, 291)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(121, 23)
         Me.btnRegistrar.TabIndex = 8
@@ -130,11 +132,31 @@ Partial Class RegistraciónProveedores
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Nombre/Descripcion"
         '
+        'btn_buscar
+        '
+        Me.btn_buscar.Location = New System.Drawing.Point(322, 127)
+        Me.btn_buscar.Name = "btn_buscar"
+        Me.btn_buscar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_buscar.TabIndex = 14
+        Me.btn_buscar.Text = "Buscar"
+        Me.btn_buscar.UseVisualStyleBackColor = True
+        '
+        'btn_eliminar
+        '
+        Me.btn_eliminar.Location = New System.Drawing.Point(265, 291)
+        Me.btn_eliminar.Name = "btn_eliminar"
+        Me.btn_eliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_eliminar.TabIndex = 15
+        Me.btn_eliminar.Text = "Eliminar"
+        Me.btn_eliminar.UseVisualStyleBackColor = True
+        '
         'RegistraciónProveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(350, 296)
+        Me.ClientSize = New System.Drawing.Size(451, 326)
+        Me.Controls.Add(Me.btn_eliminar)
+        Me.Controls.Add(Me.btn_buscar)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -165,4 +187,6 @@ Partial Class RegistraciónProveedores
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents btn_buscar As Windows.Forms.Button
+    Friend WithEvents btn_eliminar As Windows.Forms.Button
 End Class

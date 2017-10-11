@@ -1,7 +1,7 @@
 ﻿Imports System.Windows.Forms
 
 Public Class RegistracionMaquinas
-
+    Dim id As Integer
 
     Private Sub txt_nombre_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txt_nombre.KeyPress
 
@@ -103,5 +103,54 @@ Public Class RegistracionMaquinas
         conexion.Close()
         cmb_prov.SelectedIndex = -1
         cmb_area.SelectedIndex = -1
+    End Sub
+
+    Private Sub btn_buscar_Click(sender As Object, e As EventArgs) Handles btn_buscar.Click
+
+        Dim conexion As New Data.SqlClient.SqlConnection
+        Dim cmd As New Data.SqlClient.SqlCommand
+        Dim tablaA As New Data.DataTable
+        conexion.ConnectionString = "Data Source=DESKTOP-PP344HH;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+        conexion.Open()
+        cmd.Connection = conexion
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "Select * from Maquina where maqnombre = '" & txt_nombre.Text & "'" & " and cliActivo = 1"
+        tablaA.Load(cmd.ExecuteReader())
+        If tablaA.Rows.Count = 0 Then
+            MsgBox("No existe la Maquina")
+        Else
+            id = tablaA.Rows(0).Item(0)
+            txt_nombre.Text = tablaA.Rows(0).Item(1)
+            txt_descripcion.Text = tablaA.Rows(0).Item(2)
+            cmb_prov.SelectedValue = tablaA.Rows(0).Item(3)
+            txt_date.Text = tablaA.Rows(0).Item(4)
+            cmb_area.SelectedValue = tablaA.Rows(0).Item(5)
+            cmd_save.Text = "Modificar"
+            cmd_eliminar.Visible = True
+        End If
+    End Sub
+
+    Private Sub cmd_eliminar_Click(sender As Object, e As EventArgs) Handles cmd_eliminar.Click
+        EliminarCliente(id)
+        MsgBox("Cliente dado de baja")
+        LimpiarCampos()
+        cmd_save.Text = "Guardar"
+        cmd_eliminar.Visible = False
+    End Sub
+
+    Private Sub EliminarCliente(ByVal id As Integer)
+        Dim conexion As New Data.SqlClient.SqlConnection
+        conexion.ConnectionString = "Data Source=DESKTOP-PP344HH;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+
+        Dim cmd As New Data.SqlClient.SqlCommand
+        conexion.Open()
+        Dim consulta As String = ""
+
+        consulta = "update Maquina set maqActivo = " & 0 & " where cliId = " & id
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = consulta
+        cmd.Connection = conexion
+        cmd.ExecuteNonQuery()
+        conexion.Close()
     End Sub
 End Class

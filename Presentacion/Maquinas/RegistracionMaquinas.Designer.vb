@@ -36,6 +36,8 @@ Partial Class RegistracionMaquinas
         Me.lbl_descripcion = New System.Windows.Forms.Label()
         Me.lbl_nombre = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btn_buscar = New System.Windows.Forms.Button()
+        Me.cmd_eliminar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cmd_exit
@@ -165,11 +167,31 @@ Partial Class RegistracionMaquinas
         Me.Label1.TabIndex = 37
         Me.Label1.Text = "Registración de máquinas"
         '
+        'btn_buscar
+        '
+        Me.btn_buscar.Location = New System.Drawing.Point(317, 62)
+        Me.btn_buscar.Name = "btn_buscar"
+        Me.btn_buscar.Size = New System.Drawing.Size(101, 23)
+        Me.btn_buscar.TabIndex = 38
+        Me.btn_buscar.Text = "Buscar Maquina"
+        Me.btn_buscar.UseVisualStyleBackColor = True
+        '
+        'cmd_eliminar
+        '
+        Me.cmd_eliminar.Location = New System.Drawing.Point(180, 264)
+        Me.cmd_eliminar.Name = "cmd_eliminar"
+        Me.cmd_eliminar.Size = New System.Drawing.Size(57, 37)
+        Me.cmd_eliminar.TabIndex = 39
+        Me.cmd_eliminar.Text = "Eliminar"
+        Me.cmd_eliminar.UseVisualStyleBackColor = True
+        '
         'RegistracionMaquinas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(470, 313)
+        Me.Controls.Add(Me.cmd_eliminar)
+        Me.Controls.Add(Me.btn_buscar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmd_exit)
         Me.Controls.Add(Me.cmd_save)
@@ -206,4 +228,6 @@ Partial Class RegistracionMaquinas
     Friend WithEvents lbl_descripcion As Windows.Forms.Label
     Friend WithEvents lbl_nombre As Windows.Forms.Label
     Friend WithEvents Label1 As Windows.Forms.Label
+    Friend WithEvents btn_buscar As Windows.Forms.Button
+    Friend WithEvents cmd_eliminar As Windows.Forms.Button
 End Class

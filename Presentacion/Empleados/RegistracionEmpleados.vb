@@ -1,6 +1,7 @@
 ﻿Imports System.Windows.Forms
 
 Public Class RegistracionEmpleados
+    Public id As Integer
     Private Sub RegistracionEmpleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim conexion As New Data.SqlClient.SqlConnection
         Dim cmd As New Data.SqlClient.SqlCommand
@@ -35,9 +36,9 @@ Public Class RegistracionEmpleados
             MsgBox("Empleado registrado correctamente")
             LimpiarCampos()
         Else
-            'Aca gaston hacete el private sub de ModificarEmpleado()
-            'Msgbox("Empleado modificado correctamente")
-            'limpiarCampos()
+            ModificarEmpleado(id)
+            MsgBox("Empleado modificado correctamente")
+            LimpiarCampos()
         End If
 
     End Sub
@@ -94,7 +95,7 @@ Public Class RegistracionEmpleados
         If tablaA.Rows.Count = 0 Then
             MessageBox.Show("No existe el Empleado")
         Else
-
+            id = tablaA.Rows(0).Item(0)
             txt_apellido.Text = tablaA.Rows(0).Item(1)
             txt_nombre.Text = tablaA.Rows(0).Item(2).ToString()
             txt_documento.Value = tablaA.Rows(0).Item(3)
@@ -109,5 +110,27 @@ Public Class RegistracionEmpleados
 
             End If
         End If
+    End Sub
+
+    Public Sub ModificarEmpleado(ByVal id As Integer)
+        Dim apellido As String = txt_apellido.Text
+        Dim nombre As String = txt_nombre.Text
+        Dim docuemento As String = txt_documento.Value
+        Dim funcion As String = cmb_funcion.SelectedValue
+        Dim direccion As String = txt_direccion.Text
+        Dim horario As String = cmb_horario.SelectedValue
+        Dim conexion As New Data.SqlClient.SqlConnection
+        Dim cadenaConexion As String = "Data Source=DESKTOP-PP344HH;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+        conexion.ConnectionString = cadenaConexion
+        Dim cmd As New Data.SqlClient.SqlCommand
+        conexion.Open()
+        Dim consulta As String = ""
+
+        consulta = "Update Empleado set empApellido = '" & apellido & "',empNombre = '" & nombre & "', empdocumento = '" & docuemento & "',empfuncionid = " & funcion & ",empdomicilio = '" & direccion & "',empHoraid = " & horario & ",empActivo = 1"
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = consulta
+        cmd.Connection = conexion
+        cmd.ExecuteNonQuery()
+        conexion.Close()
     End Sub
 End Class
