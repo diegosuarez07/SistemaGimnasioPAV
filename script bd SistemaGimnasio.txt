@@ -150,7 +150,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[DetalleFacturaCompra](
-	[dfaId] [int] IDENTITY(1,1) NOT NULL,
+	[dfaId] [int] NOT NULL,
 	[supId] [int] NULL,
 	[dfaCantidadSuplemento] [int] NULL,
 	[dfaPresupuesto] [int] NULL,
@@ -234,7 +234,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[FacturaCompra](
 	[fcoId] [int] IDENTITY(1,1) NOT NULL,
-	[dfaId] [int] NULL,
+	
 	[cliId] [int] NULL,
 	[fcoFechaCompra] [datetime] NULL,
  CONSTRAINT [PK_FacturaCompra] PRIMARY KEY CLUSTERED 
