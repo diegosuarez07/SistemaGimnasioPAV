@@ -16,3 +16,13 @@ C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Datos\obj\Debug\Datos.vbproj.Generat
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Datos\obj\Debug\Datos.dll
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Datos\obj\Debug\Datos.xml
 C:\Users\Usuario\Desktop\SistemaGimnasioPAV\Datos\obj\Debug\Datos.pdb
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Datos\bin\Debug\Datos.dll
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Datos\bin\Debug\Datos.pdb
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Datos\bin\Debug\Datos.xml
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Datos\obj\Debug\Datos.vbprojResolveAssemblyReference.cache
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Datos\obj\Debug\Datos.Resources.resources
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Datos\obj\Debug\Datos.vbproj.GenerateResource.Cache
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Datos\obj\Debug\Datos.vbproj.CoreCompileInputs.cache
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Datos\obj\Debug\Datos.dll
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Datos\obj\Debug\Datos.xml
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Datos\obj\Debug\Datos.pdb

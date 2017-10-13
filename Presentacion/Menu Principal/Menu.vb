@@ -32,4 +32,14 @@
         Dim regSuplementos As New RegistracionSuplemento
         regSuplementos.ShowDialog()
     End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        Dim Factura As New Facturacion
+        Factura.ShowDialog()
+    End Sub
+
+    Private Sub BuscarFacturaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BuscarFacturaToolStripMenuItem.Click
+        Dim buscarfactura As New Buscar_Factura
+        Buscar_Factura.ShowDialog()
+    End Sub
 End Class

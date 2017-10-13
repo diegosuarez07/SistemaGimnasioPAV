@@ -3,7 +3,7 @@
         Dim conexion As New Data.SqlClient.SqlConnection
         Dim cmd As New Data.SqlClient.SqlCommand
 
-        Dim cadenaConexion As String = "Data Source=DESKTOP-PP344HH;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+        Dim cadenaConexion As String = "Data Source=GASTON-5132\SQLEXPRESS;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
         conexion.ConnectionString = cadenaConexion
         conexion.Open()
         cmd.Connection = conexion

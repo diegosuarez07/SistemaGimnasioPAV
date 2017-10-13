@@ -76,6 +76,18 @@
     <Compile Include="Clientes\RegistraciónClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Facturacion\Buscar Factura.Designer.vb">
+      <DependentUpon>Buscar Factura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Buscar Factura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Facturacion.Designer.vb">
+      <DependentUpon>Facturacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Facturacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Suplemento\RegistracionSuplemento.Designer.vb">
       <DependentUpon>RegistracionSuplemento.vb</DependentUpon>
     </Compile>
@@ -125,6 +137,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Clientes\RegistraciónClientes.resx">
       <DependentUpon>RegistraciónClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Buscar Factura.resx">
+      <DependentUpon>Buscar Factura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Facturacion.resx">
+      <DependentUpon>Facturacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maquinas\RegistracionMaquinas.resx">
       <DependentUpon>RegistracionMaquinas.vb</DependentUpon>
