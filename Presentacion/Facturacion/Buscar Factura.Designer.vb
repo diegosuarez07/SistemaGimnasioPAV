@@ -56,6 +56,7 @@ Partial Class Buscar_Factura
         'txt_numerofac
         '
         Me.txt_numerofac.Location = New System.Drawing.Point(128, 28)
+        Me.txt_numerofac.Maximum = New Decimal(New Integer() {100000000, 0, 0, 0})
         Me.txt_numerofac.Name = "txt_numerofac"
         Me.txt_numerofac.Size = New System.Drawing.Size(294, 20)
         Me.txt_numerofac.TabIndex = 3

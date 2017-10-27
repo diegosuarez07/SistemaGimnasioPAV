@@ -42,4 +42,14 @@
         Dim buscarfactura As New Buscar_Factura
         Buscar_Factura.ShowDialog()
     End Sub
+
+    Private Sub ClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClienteToolStripMenuItem.Click
+        Dim informecliente As New Informes
+        informecliente.ShowDialog()
+    End Sub
+
+    Private Sub SuplementoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SuplementoToolStripMenuItem.Click
+        Dim asd As New InfomeSup
+        asd.ShowDialog()
+    End Sub
 End Class

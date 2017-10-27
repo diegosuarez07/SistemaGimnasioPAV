@@ -74,23 +74,20 @@
         Dim ahora As DateTime = DateTime.Now.ToShortDateString()
         Dim asd As String = ahora.ToString("yyyy-MM-dd")
         Dim total As Integer = DataGridView1.Rows.Count
-        Dim consulta As String = "Insert into FacturaCompra (CliId, fcoFechaCompra) values (" & _clienteid & "," & asd & ")"
+        Dim consulta As String = "Insert into FacturaCompra (CliId, fcoFechaCompra) values (" & _clienteid & ",'" & ahora & "')"
         Datos.AccesoBD.ejecutarConsulta(consulta)
 
         conexion.ConnectionString = "Data Source=GASTON-5132\SQLEXPRESS;Initial Catalog=SistemaGimnasio;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
         conexion.Open()
         cmd.Connection = conexion
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "Select * from FacturaCompra where fcoFechaCompra = " & Format(ahora, "yyyy-MM-dd") & " and CliId = " & _clienteid
+        cmd.CommandText = "SELECT TOP 1 * FROM FacturaCompra ORDER BY fcoId DESC"
         tablaA.Load(cmd.ExecuteReader())
-        ComboBox1.DataSource = tablaA
-        ComboBox1.DisplayMember = "fcoId"
-        ComboBox1.ValueMember = "fcoId"
 
         Dim i As Integer
-        For i = 0 To total - 1
-            consulta = "Insert into  DetalleFacturaCompra (dfaId, supId, dfaCantidadSuplemento, dfaPresupuesto) values (" & ComboBox1.SelectedItem.ToString() & "," & DataGridView1.Rows(i).Cells(0).Value.ToString() & "," & DataGridView1.Rows(i).Cells(2).Value.ToString() & "," & (DataGridView1.Rows(i).Cells(2).Value.ToString() * DataGridView1.Rows(i).Cells(3).Value.ToString()) & ")"
-            Datos.AccesoBD.ejecutarConsulta(consulta)
+        For i = 0 To total - 2
+            Dim consulta2 As String = "Insert into  DetalleFacturaCompra (dfaId, supId, dfaCantidadSuplemento, dfaPresupuesto) values (" & tablaA.Rows(0).Item(0).ToString() & "," & DataGridView1.Rows(i).Cells(0).Value.ToString() & "," & DataGridView1.Rows(i).Cells(2).Value.ToString() & "," & (DataGridView1.Rows(i).Cells(2).Value.ToString() * DataGridView1.Rows(i).Cells(3).Value.ToString()) & ")"
+            Datos.AccesoBD.ejecutarConsulta(consulta2)
         Next
     End Sub
 
