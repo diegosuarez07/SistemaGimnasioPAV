@@ -36,10 +36,26 @@
             txt_numerofac.Enabled = False
             btn_buscar.Enabled = False
             DataGridView1.Enabled = False
+
         End If
     End Sub
 
     Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
+
+
+        txt_cliente.Text = ""
+        txt_fecha.Text = ""
+        txt_numerofac.Value = 0
+        DataGridView1.DataSource = Nothing
+        txt_numerofac.Enabled = True
+        btn_buscar.Enabled = True
+
         Me.Close()
+
+
+    End Sub
+
+    Private Sub Buscar_Factura_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

@@ -89,6 +89,14 @@
             Dim consulta2 As String = "Insert into  DetalleFacturaCompra (dfaId, supId, dfaCantidadSuplemento, dfaPresupuesto) values (" & tablaA.Rows(0).Item(0).ToString() & "," & DataGridView1.Rows(i).Cells(0).Value.ToString() & "," & DataGridView1.Rows(i).Cells(2).Value.ToString() & "," & (DataGridView1.Rows(i).Cells(2).Value.ToString() * DataGridView1.Rows(i).Cells(3).Value.ToString()) & ")"
             Datos.AccesoBD.ejecutarConsulta(consulta2)
         Next
+        cmb_cliente.SelectedIndex = -1
+        cmb_articulo.Enabled = False
+        txt_cantidad.Enabled = False
+        btn_añadir.Enabled = False
+        DataGridView1.Rows.Clear()
+        DataGridView1.Enabled = False
+        btn_eliminar.Enabled = False
+        btn_fin.Enabled = False
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

@@ -126,6 +126,60 @@
     <Compile Include="Reportes\Clientes\Informes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\Empleados\DataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Empleados\DataSet3.vb">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Empleados\InformeEmp.Designer.vb">
+      <DependentUpon>InformeEmp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Empleados\InformeEmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Graficos\Graficoemp.Designer.vb">
+      <DependentUpon>Graficoemp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Graficos\Graficoemp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Graficos\GraficoMaq.Designer.vb">
+      <DependentUpon>GraficoMaq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Graficos\GraficoMaq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Graficos\GraficoMaq2.Designer.vb">
+      <DependentUpon>GraficoMaq2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Graficos\GraficoMaq2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Maquinas\DataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Maquinas\InformeMaq.Designer.vb">
+      <DependentUpon>InformeMaq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Maquinas\InformeMaq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Proveedores\DataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Proveedores\InformeProveedorvb.Designer.vb">
+      <DependentUpon>InformeProveedorvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Proveedores\InformeProveedorvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\Suplemento\DataSet2.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -215,6 +269,30 @@
       <DependentUpon>Informes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Clientes\Report2.rdlc" />
+    <EmbeddedResource Include="Reportes\Empleados\InformeEmp.resx">
+      <DependentUpon>InformeEmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Empleados\Report3.rdlc" />
+    <EmbeddedResource Include="Reportes\Graficos\Graficoemp.resx">
+      <DependentUpon>Graficoemp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Graficos\GraficoMaq.resx">
+      <DependentUpon>GraficoMaq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Graficos\GraficoMaq2.resx">
+      <DependentUpon>GraficoMaq2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Graficos\Graph1.rdlc" />
+    <EmbeddedResource Include="Reportes\Graficos\Graph2.rdlc" />
+    <EmbeddedResource Include="Reportes\Graficos\Graph3.rdlc" />
+    <EmbeddedResource Include="Reportes\Maquinas\InformeMaq.resx">
+      <DependentUpon>InformeMaq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Maquinas\Report4.rdlc" />
+    <EmbeddedResource Include="Reportes\Proveedores\InformeProveedorvb.resx">
+      <DependentUpon>InformeProveedorvb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Proveedores\Report5.rdlc" />
     <EmbeddedResource Include="Reportes\Suplemento\InfomeSup.resx">
       <DependentUpon>InfomeSup.vb</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +323,39 @@
     </None>
     <None Include="Reportes\Clientes\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Empleados\DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Empleados\DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reportes\Empleados\DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Maquinas\DataSet4.xsc">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Maquinas\DataSet4.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet4.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reportes\Maquinas\DataSet4.xss">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Proveedores\DataSet5.xsc">
+      <DependentUpon>DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Proveedores\DataSet5.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet5.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reportes\Proveedores\DataSet5.xss">
+      <DependentUpon>DataSet5.xsd</DependentUpon>
     </None>
     <None Include="Reportes\Suplemento\DataSet2.xsc">
       <DependentUpon>DataSet2.xsd</DependentUpon>
@@ -284,6 +395,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

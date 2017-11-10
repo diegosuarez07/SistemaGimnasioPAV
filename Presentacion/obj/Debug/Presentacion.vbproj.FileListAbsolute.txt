@@ -106,3 +106,9 @@ C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Presentacion\bin\Debug\zh-HANS\Mi
 C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Presentacion\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.Informes.resources
 C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.InfomeSup.resources
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.InformeEmp.resources
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.InformeMaq.resources
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.InformeProveedorvb.resources
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.Graficoemp.resources
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.GraficoMaq.resources
+C:\Users\gasto\Source\Repos\SistemaGimnasioPAV\Presentacion\obj\Debug\Presentacion.GraficoMaq2.resources

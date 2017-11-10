@@ -52,4 +52,34 @@
         Dim asd As New InfomeSup
         asd.ShowDialog()
     End Sub
+
+    Private Sub EmpleadosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles EmpleadosToolStripMenuItem1.Click
+        Dim das As New InformeEmp
+        das.ShowDialog()
+    End Sub
+
+    Private Sub MquinasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MquinasToolStripMenuItem.Click
+        Dim qwe As New InformeMaq
+        qwe.ShowDialog()
+    End Sub
+
+    Private Sub ProveedoresToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem1.Click
+        Dim xzx As New InformeProveedorvb
+        xzx.ShowDialog()
+    End Sub
+
+    Private Sub EmpleadoPorAreaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpleadoPorAreaToolStripMenuItem.Click
+        Dim aaa As New Graficoemp
+        aaa.ShowDialog()
+    End Sub
+
+    Private Sub MaquinasPorAreaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MaquinasPorAreaToolStripMenuItem.Click
+        Dim grap As New GraficoMaq
+        grap.ShowDialog()
+    End Sub
+
+    Private Sub MaquinasPorProveedorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MaquinasPorProveedorToolStripMenuItem.Click
+        Dim rrr As New GraficoMaq2
+        rrr.ShowDialog()
+    End Sub
 End Class
