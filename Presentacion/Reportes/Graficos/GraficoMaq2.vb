@@ -16,7 +16,7 @@ Public Class GraficoMaq2
         cmdrepo.Connection = conex
         cmdrepo.CommandText = "Select a.maqId, a.maqNombre, a.maqDescripcion , b.provMaquinDescripcion , a.maqFechaCompra , a.areaEntrenId ,a.maqActivo  from Maquina a, Proveedormaquina b where a.provMaquinId= b.provMaquinId"
         ds.DataTable1.Load(cmdrepo.ExecuteReader())
-        MessageBox.Show("Filas a mostrar: " & ds.DataTable1.Rows.Count().ToString())
+
         rds.Name = "DataSet1"
         rds.Value = ds.DataTable1
         With ReportViewer1

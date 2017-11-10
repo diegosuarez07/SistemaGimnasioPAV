@@ -15,7 +15,7 @@ Public Class Informes
         cmdrepo.Connection = conex
         cmdrepo.CommandText = "Select * from Cliente"
         ds.DataTable1.Load(cmdrepo.ExecuteReader())
-        MessageBox.Show("Filas a mostrar: " & ds.DataTable1.Rows.Count().ToString())
+
         rds.Name = "DataSet1"
         rds.Value = ds.DataTable1
         With ReportViewer1

@@ -16,7 +16,7 @@ Public Class Graficoemp
         cmdrepo.Connection = conex
         cmdrepo.CommandText = "Select a.empId, a.empNombre, a.empApellido , a.empDni , a.empDomicilio  , b.empFuncionDescripcion from Empleado a, EmpleadoFuncion b where a.empFuncionId= b.empFuncionId"
         ds.DataTable1.Load(cmdrepo.ExecuteReader())
-        MessageBox.Show("Filas a mostrar: " & ds.DataTable1.Rows.Count().ToString())
+
         rds.Name = "DataSet1"
         rds.Value = ds.DataTable1
         With ReportViewer1
